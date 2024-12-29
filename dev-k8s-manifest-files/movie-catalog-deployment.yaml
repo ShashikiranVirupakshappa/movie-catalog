@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         -
-          image: shashi72174/movie-catalog:2.0
+          image: shashi72174/movie-catalog:3.0
           imagePullPolicy: Always
           ports:
             -
