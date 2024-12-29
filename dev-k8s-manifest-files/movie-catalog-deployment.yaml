@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: movie-catalog-deploy
+  namespace: default
+  labels:
+    app: movie-catalog
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: movie-catalog
+  template:
+    metadata:
+      labels:
+        app: movie-catalog
+    spec:
+      containers:
+        -
+          image: shashi72174/movie-catalog:1.0
+          imagePullPolicy: Always
+          ports:
+            -
+              containerPort: 8081
+              name: movie-catalog
+          name: movie-catalog
