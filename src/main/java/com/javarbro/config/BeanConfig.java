@@ -10,12 +10,12 @@ public class BeanConfig {
 
     @Bean(name = "movieInfoRestClient")
     public RestClient getMovieInfoRestClient() {
-        return RestClient.builder().baseUrl("http://movie-info-service").build();
+        return RestClient.builder().baseUrl("http://movie-info-service:8082").build();
     }
 
     @Bean(name = "movieRatingsRestClient")
     public RestClient getMovieRatingsRestClient() {
-        return RestClient.builder().baseUrl("http://movie-ratings-service").build();
+        return RestClient.builder().baseUrl("http://movie-ratings-service:8083").build();
     }
 
     @Bean(name = "restClient")
